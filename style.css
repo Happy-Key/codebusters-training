@@ -1,0 +1,9 @@
+#sidebar {
+    height: 100%;
+    max-width: 160px;
+}
+
+.navButton {
+    margin: 0px;
+    border-width: 0px;
+}
