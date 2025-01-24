@@ -1,4 +1,4 @@
-import {} from './main.js';
+import { selectTab } from './main.js';
 
 export const createEventListeners = () => {
     document.getElementById('homeTabButton').addEventListener('click',() => selectTab("homeTab"));
