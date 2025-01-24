@@ -7,18 +7,18 @@ createEventListeners();
 export function selectTab(name) {
     hideTabs();
     showTab(name);
-  }
+}
   
-  function hideTabs() {
+function hideTabs() {
     let tabs = document.getElementsByClassName("tab-content");
     for (let i = 0; i < tabs.length; i++) {
-      tabs[i].style.display = "none";
+        tabs[i].style.display = "none";
     }
-  }
-  
-  function showTab(name) {
+}
+
+function showTab(name) {
     let tabs = document.getElementsByClassName("tab-content");
     for (let i = 0; i < tabs.length; i++) {
-      if (name == tabs[i].id) { tabs[i].style.display = "flex";}
+        if (name == tabs[i].id) { tabs[i].style.display = "flex";}
     }
-  }
+}
