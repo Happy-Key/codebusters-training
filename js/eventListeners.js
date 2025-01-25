@@ -1,16 +1,6 @@
-import { selectTab, selectOneOfClass, selectTabSubtab } from './main.js';
+import { selectTabSubtab } from './main.js';
 
 export const createEventListeners = () => {
-    /*
-    document.getElementById('homeTabNav').addEventListener('click',() => selectTab("homeTab"));
-    document.getElementById('hillTabNav').addEventListener('click',() => selectTab("hillTab"));
-    document.getElementById('morseTabNav').addEventListener('click',() => selectTab("morseTab"));
-
-    document.getElementById('homeTabNav').addEventListener('click',() => selectTab("homeTab"));
-    document.getElementById('hillTabNav').addEventListener('click',() => selectTab("hillTab"));
-    document.getElementById('morseTabNav').addEventListener('click',() => selectTab("morseTab"));
-    */
-
     document.getElementById('homeTabNav').addEventListener('click', () => selectTabSubtab("homeTab", "home-mainTab"));
     document.getElementById('hillTabNav').addEventListener('click', () => selectTabSubtab("hillTab", "hill-mainTab"));
     document.getElementById('morseTabNav').addEventListener('click', () => selectTabSubtab("morseTab", "morse-mainTab"));
