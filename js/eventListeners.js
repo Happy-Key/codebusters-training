@@ -1,4 +1,4 @@
-import { selectTab, selectOneOfClass } from './main.js';
+import { selectTab, selectOneOfClass, selectTabSubtab } from './main.js';
 
 export const createEventListeners = () => {
     /*
@@ -11,14 +11,20 @@ export const createEventListeners = () => {
     document.getElementById('morseTabNav').addEventListener('click',() => selectTab("morseTab"));
     */
 
-    document.getElementById('homeTabNav').addEventListener('click',() => selectOneOfClass("homeTab", "tab-content"));
-    document.getElementById('hillTabNav').addEventListener('click',() => selectOneOfClass("hillTab", "tab-content"));
-    document.getElementById('morseTabNav').addEventListener('click',() => selectOneOfClass("morseTab", "tab-content"));
+    document.getElementById('homeTabNav').addEventListener('click', () => selectTabSubtab("homeTab", "home-mainTab"));
+    document.getElementById('hillTabNav').addEventListener('click', () => selectTabSubtab("hillTab", "hill-mainTab"));
+    document.getElementById('morseTabNav').addEventListener('click', () => selectTabSubtab("morseTab", "morse-mainTab"));
 
-    document.getElementById('alphaNumNav').addEventListener('click',() => selectOneOfClass("hill-alphaNumSubtab", "subtab-content"));
-    document.getElementById('matrixNav').addEventListener('click',() => selectOneOfClass("hill-matrixSubtab", "subtab-content"));
-    document.getElementById('alphaMorseNav').addEventListener('click',() => selectOneOfClass("morse-alphaMorseSubtab", "subtab-content"));
+    document.getElementById('home-mainNav').addEventListener('click', () => selectTabSubtab("homeTab", "home-mainTab"));
+    document.getElementById('home-aboutNav').addEventListener('click', () => selectTabSubtab("homeTab", "home-aboutTab"));
+
+    document.getElementById('hill-mainNav').addEventListener('click', () => selectTabSubtab("hillTab", "hill-mainTab"));
+    document.getElementById('hill-alphaNumNav').addEventListener('click', () => selectTabSubtab("hillTab", "hill-alphaNumSubtab"));
+    document.getElementById('hill-matrixNav').addEventListener('click', () => selectTabSubtab("hillTab", "hill-matrixSubtab"));
+
+    document.getElementById('morse-mainNav').addEventListener('click', () => selectTabSubtab("morseTab", "morse-mainTab"));
+    document.getElementById('morse-alphaMorseNav').addEventListener('click', () => selectTabSubtab("morseTab", "morse-alphaMorseSubtab"));
 
 
-    document.addEventListener("DOMContentLoaded", () => selectOneOfClass("homeTab", "tab-content"));
+    document.addEventListener("DOMContentLoaded", () => selectTabSubtab("homeTab", "home-mainTab"));
 }

@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Codebusters Training</title>
-        <link rel="stylesheet" href="styles.css">
-        <script type="module" src="js/main.js"></script>
-    </head>
+<head>
+    <title>Codebusters Training</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="js/main.js"></script>
+</head>
 
-    <body>
-        <nav id="sidebar">
-            <button id="homeTabNav">Home</button>
-            <button id="hillTabNav">Hill Cipher</button>
-            <button id="morseTabNav">Morse</button>
-        </nav>
+<body>
+    <nav id="sidebar">
+        <button id="homeTabNav">Home</button>
+        <button id="hillTabNav">Hill Cipher</button>
+        <button id="morseTabNav">Morse</button>
+    </nav>
+    
     <div id="homeTab" class="tab-content stretchedToMargin">
-        <p>home</p>
+        <div class="subNavBar">
+            <button id="home-mainNav">Main</button>
+            <button id="home-aboutNav">About</button>
+        </div>
+        <div id="home-mainTab" class="subtab-content">
+            <p>home</p>
+        </div>
+        <div id="home-aboutTab" class="subtab-content">
+            <p>about</p>
+        </div>
     </div>
+
     <div id="hillTab" class="tab-content stretchedToMargin">
         <div class="subNavBar">
-            <button id="alphaNumNav">Letter &lt;-&gt; Number</button>
-            <button id="matrixNav">Matrix Multiplication</button>
+            <button id="hill-mainNav">Main</button>
+            <button id="hill-alphaNumNav">Letter &lt;-&gt; Number</button>
+            <button id="hill-matrixNav">Matrix Multiplication</button>
+        </div>
+        <div id="hill-mainTab" class="subtab-content">
+            <p>A Hill Cipher is hard to climb up.</p>
         </div>
         <div id="hill-alphaNumSubtab" class="subtab-content">
             <p>Letter &lt;-&gt; Number Conversions!!</p>
@@ -27,9 +42,14 @@
             <p>Matrices - egads linear algebra</p>
         </div>
     </div>
+
     <div id="morseTab" class="tab-content stretchedToMargin">
         <div class="subNavBar">
-            <button id="alphaMorseNav">Letter &lt;-&gt; Morse</button>
+            <button id="morse-mainNav">Main</button>
+            <button id="morse-alphaMorseNav">Letter &lt;-&gt; Morse</button>
+        </div>
+        <div id="morse-mainTab" class="subtab-content">
+            <p>Feel more remorse for those who morbidly morph into more morse.</p>
         </div>
         <div id="morse-alphaMorseSubtab" class="subtab-content">
             <p>morse</p>
