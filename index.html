@@ -8,18 +8,29 @@
 
     <body>
         <nav id="sidebar">
-            <button id="homeTabButton" class="navButton left">Home</button>
-            <button id="hillTabButton" class="navButton left">Hill Cipher</button>
-            <button id="morseTabButton" class="navButton left">Morse</button>
+            <button id="homeTabNav">Home</button>
+            <button id="hillTabNav">Hill Cipher</button>
+            <button id="morseTabNav">Morse</button>
         </nav>
-    <div id="homeTab" class="tab-content">
+    <div id="homeTab" class="tab-content stretchedToMargin">
         <p>home</p>
     </div>
-    <div id="hillTab" class="tab-content">
-        <p>hill</p>
+    <div id="hillTab" class="tab-content stretchedToMargin">
+        <div class="subNavBar">
+            <button id="alphaNumNav">Letter &lt;-&gt; Number</button>
+            <button id="matrixNav">Matrix Multiplication</button>
+        </div>
+        <div id="hill-alphaNumSubtab" class="subtab-content">
+            <p>Letter &lt;-&gt; Number Conversions!!</p>
+        </div>
     </div>
-    <div id="morseTab" class="tab-content">
-        <p>morse</p>
+    <div id="morseTab" class="tab-content stretchedToMargin">
+        <div class="subNavBar">
+            <button id="alphaMorseNav">Letter &lt;-&gt; Morse</button>
+        </div>
+        <div id="morse-alphaMorseSubtab">
+            <p>morse</p>
+        </div>
     </div>
 </body>
 </html>

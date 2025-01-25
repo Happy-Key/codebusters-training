@@ -24,4 +24,14 @@ body {
 .tab-content {
     margin-left: 160px;
     padding: 10px;
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+
+.stretchedToMargin {
+    position: absolute;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
 }
