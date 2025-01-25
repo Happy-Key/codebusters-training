@@ -21,6 +21,12 @@ body {
     border-bottom-width: 1px;
 }
 
+.subNavBar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .tab-content {
     margin-left: 160px;
     padding: 10px;
