@@ -22,3 +22,10 @@ function showTab(name) {
         if (name == tabs[i].id) { tabs[i].style.display = "flex";}
     }
 }
+
+export function selectOneOfClass(name, className) {
+    let collection = document.getElementsByClassName(className);
+    collection.forEach(element => {
+        name == element.id ? element.style.display = "flex" : element.style.display = "none";
+    });
+}
