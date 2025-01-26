@@ -1,28 +1,42 @@
+* {
+    background-color: #151515;
+    color: #D0DAE0;
+}
+
 body {
     margin: 0px;
     column-count: 2;
 }
 
+button {
+    border-color: #b5e853;
+    color: #b5e853;
+}
+
+input {
+    background-color: #1C1F20;
+}
+
 #sidebar {
     height: 100%;
     position: fixed;
-    width: 160px;
+    width: 200px;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
 
 #sidebar button {
-    border-width: 1px 1px 0px 0px;
+    border-width: 2px 2px 0px 0px;
     padding: 5px;
 }
 
 #sidebar button:last-child {
-    border-bottom-width: 1px;
+    border-bottom-width: 2px;
 }
 
 #hill-alphaNumGame {
-    border: 1px solid #000;
+    border: 2px solid #D0DAE0;
     margin: 10px;
     padding: 10px;
     width: 650px;
@@ -54,7 +68,7 @@ body {
 }
 
 .tab-content {
-    margin-left: 160px;
+    margin-left: 200px;
     flex-flow: column nowrap;
     align-items: stretch;
 }
