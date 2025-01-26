@@ -12,9 +12,11 @@ const Gamemode = {
     INVERSE: 1,
 }
 
-var gms = [-999, Gamemode.INACTIVE];
-var inputs = [-999, "hill-alphaNumInput"]
-var displays = [-999, "hill-alphaNumDisplay"]
+var playing = [-999, false];
+export var gm = [-999, Gamemode.NORMAL];
+var inputs = [-999, "hill-alphaNumInput"];
+var displays = [-999, "hill-alphaNumDisplay"];
+var gmOptions = [-999, "hill-alphaNumMode"];
 
 var answer;
 
@@ -31,9 +33,9 @@ export function selectTabSubtab(tab, subtab) {
 
 export function gameInput(gameType) {
     let input = document.getElementById(inputs[gameType]).value;
-    if (gms[gameType] == Gamemode.INACTIVE) {
+    if (!playing[gameType]) {
         if (input == "start") {
-            gms[gameType] = Gamemode.NORMAL;
+            playing[gameType] = true;
             document.getElementById(inputs[gameType]).value = '';
             document.getElementById(inputs[gameType]).placeholder = '';
             nextQuestion(gameType);
@@ -51,8 +53,26 @@ function nextQuestion(gameType) {
     switch(gameType) {
         case Gametype.HILL_ALPHANUM:
             let rand = getRandomInt(0, 26);
-            answer = String.fromCharCode(rand + 97);
-            document.getElementById(displays[Gametype.HILL_ALPHANUM]).textContent = rand;
+            let letter = String.fromCharCode(rand + 97)
+            answer = gm[gameType] == 0 ? letter : rand;
+            document.getElementById(displays[Gametype.HILL_ALPHANUM]).textContent = gm[gameType] == 0 ? rand : letter;
+    }
+}
+
+export function resetGame(gameType) {
+    playing[gameType] = false;
+    document.getElementById(inputs[gameType]).value = '';
+    document.getElementById(inputs[gameType]).placeholder = 'start';
+    document.getElementById(displays[Gametype.HILL_ALPHANUM]).textContent = "Type \"start\" to start";
+}
+
+export function switchGameMode(gameType) {
+    let ele = document.getElementsByName('gender');
+    for (let i = 0; i < ele.length; i++) {
+        if (ele[i].checked) {
+            gm[gameType] = Gamemode[ele[i].value];
+            return;
+        }
     }
 }
 

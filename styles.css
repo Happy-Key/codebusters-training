@@ -25,13 +25,25 @@ body {
     border: 1px solid #000;
     margin: 10px;
     padding: 10px;
-    width: 85%;
+    width: 650px;
     aspect-ratio: 2;
 }
 
+.gameWindow {
+    justify-content: space-between;
+}
+
 .gameDisplay {
-    height: 45%;
+    flex-grow: 0.4;
     align-content: center
+}
+
+.gameInput {
+    flex-grow: 0.1;
+}
+
+.gameOptions {
+    flex-grow: 0.2;
 }
 
 .subNavBar {
@@ -47,7 +59,8 @@ body {
     align-items: stretch;
 }
 
-.subtab-content {
+.vertical-flex {
+    display: flex;
     flex-flow: column nowrap;
     align-items: center;
 }

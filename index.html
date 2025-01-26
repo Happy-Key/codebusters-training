@@ -19,11 +19,11 @@
             <button id="home-aboutNav">About</button>
         </div>
 
-        <div id="home-mainTab" class="subtab-content">
+        <div id="home-mainTab" class="subtab-content vertical-flex">
             <p>home</p>
         </div>
 
-        <div id="home-aboutTab" class="subtab-content">
+        <div id="home-aboutTab" class="subtab-content vertical-flex">
             <p>about</p>
         </div>
     </div>
@@ -35,19 +35,27 @@
             <button id="hill-matrixNav">Matrix Multiplication</button>
         </div>
 
-        <div id="hill-mainTab" class="subtab-content">
+        <div id="hill-mainTab" class="subtab-content vertical-flex">
             <p>A Hill Cipher is hard to climb up.</p>
         </div>
 
-        <div id="hill-alphaNumSubtab" class="subtab-content" style="display: flex;">
-            <div id="hill-alphaNumGame">
-                <h1 class="horizontallyCentered gameDisplay" id="hill-alphaNumDisplay">Type "start" to start</h1>
-                <input class="horizontallyCentered" placeholder="start" id="hill-alphaNumInput">
+        <div id="hill-alphaNumSubtab" class="subtab-content vertical-flex">
+            <div id="hill-alphaNumGame" class="vertical-flex gameWindow">
+                <h1 id="hill-alphaNumDisplay" class="gameDisplay">Type "start" to start</h1>
+                <input id="hill-alphaNumInput" class="gameInput" placeholder="start">
+                <div class="gameOptions">
+                    <input type="radio" name="hill-alphaNumMode" value="normal" checked>
+                    <label for="hill-alphaNumMode">Number to Letter</label><br>
+                    <input type="radio" name="hill-alphaNumMode" value="inverse">
+                    <label for="hill-alphaNumMode">Letter to Number</label><br>
+                    <br>
+                    <button id="hill-alphaNumOptions">Apply</button>
+                </div>
             </div>
             <p>Letter &lt;-&gt; Number Conversions!!</p>
         </div>
 
-        <div id="hill-matrixSubtab" class="subtab-content">
+        <div id="hill-matrixSubtab" class="subtab-content vertical-flex">
             <p>Matrices - egads linear algebra</p>
         </div>
     </div>
@@ -58,11 +66,11 @@
             <button id="morse-alphaMorseNav">Letter &lt;-&gt; Morse</button>
         </div>
 
-        <div id="morse-mainTab" class="subtab-content">
+        <div id="morse-mainTab" class="subtab-content vertical-flex">
             <p>Feel more remorse for those who morbidly morph into more morse.</p>
         </div>
 
-        <div id="morse-alphaMorseSubtab" class="subtab-content">
+        <div id="morse-alphaMorseSubtab" class="subtab-content vertical-flex">
             <p>morse</p>
         </div>
     </div>
