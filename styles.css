@@ -21,17 +21,35 @@ body {
     border-bottom-width: 1px;
 }
 
+#hill-alphaNumGame {
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 10px;
+    width: 85%;
+    aspect-ratio: 2;
+}
+
+.gameDisplay {
+    height: 45%;
+    align-content: center
+}
+
 .subNavBar {
     display: flex;
     justify-content: center;
     gap: 10px;
+    padding: 10px;
 }
 
 .tab-content {
     margin-left: 160px;
-    padding: 10px;
     flex-flow: column nowrap;
     align-items: stretch;
+}
+
+.subtab-content {
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .stretchedToMargin {
@@ -40,4 +58,10 @@ body {
     top:0;
     left:0;
     right:0;
+}
+
+.horizontallyCentered {
+    margin-inline: auto;
+    max-width: fit-content;
+    display: block;
 }
