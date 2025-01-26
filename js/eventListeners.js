@@ -1,4 +1,4 @@
-import { selectTabSubtab } from './main.js';
+import { gameInput, selectTabSubtab, Gametype } from './main.js';
 
 export const createEventListeners = () => {
     document.getElementById('homeTabNav').addEventListener('click', () => selectTabSubtab("homeTab", "home-mainTab"));
@@ -15,6 +15,7 @@ export const createEventListeners = () => {
     document.getElementById('morse-mainNav').addEventListener('click', () => selectTabSubtab("morseTab", "morse-mainTab"));
     document.getElementById('morse-alphaMorseNav').addEventListener('click', () => selectTabSubtab("morseTab", "morse-alphaMorseSubtab"));
 
+    document.getElementById('hill-alphaNumInput').addEventListener('input', () => gameInput(Gametype.HILL_ALPHANUM));
 
     document.addEventListener("DOMContentLoaded", () => selectTabSubtab("homeTab", "home-mainTab"));
 }
